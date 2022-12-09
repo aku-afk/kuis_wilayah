@@ -1,0 +1,67 @@
+.judul,
+.description {
+    font-family: 'Courier New', Courier, monospace;
+}
+
+#canvas-map {
+    width: 800px;
+    height: 500px;
+    background-image: url(../img/DIY-MAP.svg);
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.nameloc {
+    color : black;
+    font-family: 'Courier New', Courier, monospace;
+    height: 20px;
+    background-color: rgba(255, 255, 255, 1);
+    border: none;
+    border-radius: 5px;
+    padding-left: 10px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+}
+.i1 {
+    border-bottom: 2px solid #ff74ab;
+    position: absolute;
+    top: 300px;
+    left: 400px;
+}
+.i2 {
+    border-bottom: 2px solid #fcff3f;
+    position: absolute;
+    top: 360px;
+    left: 380px;
+}
+.i3 {
+    border-bottom: 2px solid #8affb4;
+    position: absolute;
+    top: 450px;
+    left: 350px;
+}
+.i4 {
+    border-bottom: 2px solid #5f88ff;
+    position: absolute;
+    top: 350px;
+    left: 70px;
+}
+.i5 {
+    border-bottom: 2px solid #0fc9b0;
+    position: absolute;
+    top: 500px;
+    left: 500px;
+}
+
+.cek {
+    width: 200px;
+    font-size: 20px;
+    font-family: 'Courier New', Courier, monospace;
+    color: white;
+    border: none;
+    border-radius: 10px;
+    background-color: rgba(25, 135, 84, 1);
+}
+.submit {
+    margin-top: 30px;
+}
