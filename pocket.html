@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>tebak wilayah</title>
+</head>
+
+<style>
+.judul,
+.description {
+    font-family: 'Courier New', Courier, monospace;
+}
+
+#canvas-map {
+    width: 800px;
+    height: 500px;
+    background-image: url('https://raw.githubusercontent.com/aku-afk/kuis_wilayah/b1d013020880c0f9802c2d797368ab4a16d90c91/img/DIY-MAP.svg');
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.nameloc {
+    color : black;
+    font-family: 'Courier New', Courier, monospace;
+    height: 20px;
+    background-color: rgba(255, 255, 255, 1);
+    border: none;
+    border-radius: 5px;
+    padding-left: 10px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+}
+.i1 {
+    border-bottom: 2px solid #ff74ab;
+    position: absolute;
+    top: 300px;
+    left: 400px;
+}
+.i2 {
+    border-bottom: 2px solid #fcff3f;
+    position: absolute;
+    top: 360px;
+    left: 380px;
+}
+.i3 {
+    border-bottom: 2px solid #8affb4;
+    position: absolute;
+    top: 450px;
+    left: 350px;
+}
+.i4 {
+    border-bottom: 2px solid #5f88ff;
+    position: absolute;
+    top: 350px;
+    left: 70px;
+}
+.i5 {
+    border-bottom: 2px solid #0fc9b0;
+    position: absolute;
+    top: 500px;
+    left: 500px;
+}
+
+.cek {
+    width: 200px;
+    font-size: 20px;
+    font-family: 'Courier New', Courier, monospace;
+    color: white;
+    border: none;
+    border-radius: 10px;
+    background-color: rgba(25, 135, 84, 1);
+}
+.submit {
+    margin-top: 30px;
+}
+</style>
+
+<body>
+    <div>
+        <h1 class="judul">Tebak Wilayah D.I.Yogyakarta</h1>
+        <hr>
+        <p class="description">
+            Ini cuma game sederhana untuk mengetahui pengetahuan<br>
+            tentang nama wilayah, lebih tepatnya Kabupaten di D.I.Yogyakarta
+        </p>
+    </div>
+
+    <br><br>
+
+    <div id="canvas-map">
+        <input type="text" class="nameloc i1" name="i1" id="i1" placeholder="Masukkan Tebakanmu">
+        <input type="text" class="nameloc i2" name="i2" id="i2" placeholder="Masukkan Tebakanmu">
+        <input type="text" class="nameloc i3" name="i3" id="i3" placeholder="Masukkan Tebakanmu">
+        <input type="text" class="nameloc i4" name="i4" id="i4" placeholder="Masukkan Tebakanmu">
+        <input type="text" class="nameloc i5" name="i5" id="i5" placeholder="Masukkan Tebakanmu">
+    </div>
+    <div class="submit">
+        <input class="cek" onclick="cek()" type="submit" value="Cek Tebakanku">
+    </div>
+</body>
+
+<script>
+const TRUE = '5px solid rgba(25, 135, 84, 1)';
+const FALSE = '5px solid rgba(220, 53, 69, 1)';
+
+function benar(id) {
+    document.getElementById(id).style.border = TRUE;
+    // document.getElementById(id).style.color = "white";
+}
+function salah(id) {
+    document.getElementById(id).style.border = FALSE;
+    // document.getElementById(id).style.color = "white";
+}
+
+function cek() {
+    var i1 = document.getElementById('i1').value;
+    var i2 = document.getElementById('i2').value;
+    var i3 = document.getElementById('i3').value;
+    var i4 = document.getElementById('i4').value;
+    var i5 = document.getElementById('i5').value;
+
+    // I1
+    if (i1 == "SLEMAN") {
+        console.log(i1);
+        benar('i1');
+    } else {
+        console.log('- SALAH -');
+        salah('i1');
+    } 
+    
+    // I2
+    if (i2 == "YOGYAKARTA") {
+        console.log(i2);
+        benar('i2');
+    } else {
+        console.log('- SALAH -');
+        salah('i2');
+    }
+    
+    // 13
+    if (i3 == "BANTUL") {
+        console.log(i3);
+        benar('i3');
+    } else {
+        console.log('- SALAH -');
+        salah('i3');
+    }
+    
+    // 14
+    if (i4 == "KULON PROGO") {
+        console.log(i4);
+        benar('i4');
+    } else {
+        console.log('- SALAH -');
+        salah('i4');
+    }
+    
+    // I5
+    if (i5 == "GUNUNGKIDUL") {
+        console.log(i5);
+        benar('i5');
+    } else {
+        console.log('- SALAH -');
+        salah('i5');
+    }
+}
+
+</script>
+
+</html>
